@@ -29,7 +29,7 @@ int main(void)
 int icnt = 0;
 int ocnt = 0;
 int radius = 50;
-
+double pi;
 
 
 
