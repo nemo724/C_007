@@ -17,7 +17,7 @@ pp->y = rand() % 100;//2*radius==원을 내접하고 있는 사각형 한 변의
 void calculate_circle_equation(POINT* pp, int* icntp, int*ocntp,int radius)
 {int px=pow((pp->x)-radius,2);
 int py= pow((pp->y) - radius, 2);
-double result = sqrt(px + py);
+double result = px + py;
 
 if(result<=pow(radius,2))
 	{*icntp += 1;}
@@ -29,11 +29,12 @@ else if (result > pow(radius, 2))
 
 void output_pi(int* icntp, int* ocntp, double*pip, int i)
 {bool print=false;
-	for(int y =1;y<10;y++)
+	for(int y =1;y<=6;y++)
 		{if(i==pow(10,y)){print=true; }}
 
 	if (print)
-		{printf("icnt = %d, ocnt = %d, pi =%f\n",*icntp,*ocntp,*pip);}
+		{*pip=(double)*icntp/(*icntp+*ocntp)*4;
+		printf("icnt = %d, ocnt = %d, pi =%f\n",*icntp,*ocntp,*pip);}
 		
 
 }
@@ -56,10 +57,10 @@ int radius = 50;
 double pi;
 
 srand((unsigned int)time(NULL));
-
-make_point(&p);
+for(int i=1;i<=100000;i++)
+{make_point(&p);
 calculate_circle_equation(&p, &icnt, &ocnt, radius);
 output_pi(&icnt, &ocnt, &pi, i);
-
+}
 
 }
