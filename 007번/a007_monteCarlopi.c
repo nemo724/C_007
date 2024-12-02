@@ -33,7 +33,7 @@ void output_pi(int* icntp, int* ocntp, double*pip, int i)
 		{if(i==pow(10,y)){print=true; }}
 
 	if (print)
-		{*pip=(double)*icntp/(*icntp+*ocntp)*4;
+		{*pip=(double)*icntp/(*icntp+*ocntp)*4;//충돌이 날것입니다
 		printf("원 안의 점 갯수 = %d, 원 밖의 점의 갯수 = %d, pi =%f\n",*icntp,*ocntp,*pip);}
 		
 
