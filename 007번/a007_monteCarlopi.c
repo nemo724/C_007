@@ -27,6 +27,7 @@ typedef struct { int x, y; }POINT;
 int main(void)
 {POINT p;
 int icnt = 0;
+int ocnt = 0;
 
 
 
