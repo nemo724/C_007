@@ -28,6 +28,7 @@ int main(void)
 {POINT p;
 int icnt = 0;
 int ocnt = 0;
+int radius = 50;
 
 
 
