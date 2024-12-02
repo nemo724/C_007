@@ -34,7 +34,7 @@ void output_pi(int* icntp, int* ocntp, double*pip, int i)
 
 	if (print)
 		{*pip=(double)*icntp/(*icntp+*ocntp)*4;
-		printf("icnt = %d, ocnt = %d, pi =%f\n",*icntp,*ocntp,*pip);}
+		printf("원 안의 점 갯수 = %d, 원 밖의 점의 갯수 = %d, pi =%f\n",*icntp,*ocntp,*pip);}
 		
 
 }
