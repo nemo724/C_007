@@ -62,5 +62,5 @@ for(int i=1;i<=100000;i++)
 calculate_circle_equation(&p, &icnt, &ocnt, radius);
 output_pi(&icnt, &ocnt, &pi, i);
 }
-
+//충돌 연습
 }
